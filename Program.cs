@@ -1,50 +1,23 @@
-/*
- * COP2360 – Module 7 Group Project
- * Dictionary Management System
- * 
- * Role A – Justin Robinson (Lead / Repo Owner)
- * Role B – Robert Weinberger (Menu Developer)
- * Role C – Nayobe Jean-Louis (CRUD Developer)
- * Role D – Leopoldo Ramos (Extras Developer)
- * Role E – Donovan Zangwill (Display & Documentation)
- * 
- * Purpose:
- * Serves as the main entry point for the program.
- * Initializes the project and confirms that the repository and
- * structure are working before the menu and operations are implemented.
- */
-
 using System;
 using System.Collections.Generic;
 
 namespace Module7DictionaryProject
 {
-    public class Operations
-    {
-        public Dictionary<string, List<string>> myDictionary { get; } = new Dictionary<string, List<string>>(StringComparer.OrdinalIgnoreCase);
-
-        public void AddEntry() { }
-        public void SearchEntry() { }
-        public void UpdateEntry() { }
-        public void DeleteEntry() { }
-        public void ViewAllEntries() { }
-        public void ExtrasMenu() { }
-    }
-
     internal class Program
     {
+        // Creates a single shared Operations object from Nayobe's file
         private static Operations manager = new Operations();
 
         static void Main(string[] args)
         {
             Console.Title = "Dictionary Management System";
             bool running = true;
-            
+
             while (running)
             {
                 DisplayMenu();
                 running = HandleMenuChoice();
-                
+
                 if (running)
                 {
                     Console.WriteLine("\nPress any key to return to Main Menu...");
@@ -110,4 +83,3 @@ namespace Module7DictionaryProject
         }
     }
 }
-
