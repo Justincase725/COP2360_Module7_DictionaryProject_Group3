@@ -10,7 +10,31 @@ namespace Module7DictionaryProject
         {
             Console.Title = "Dictionary Management System";
             bool running = true;
+// ===== STARTUP TITLE =====
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("=============================================");
+Console.WriteLine("         GROUP 3 DICTIONARY MANAGER");
+Console.WriteLine("=============================================");
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("   Welcome to the Group 3 Dictionary System!");
+Console.ForegroundColor = ConsoleColor.White;
+Thread.Sleep(800);
+Console.Clear();
 
+// ===== RANDOM FUN FACT =====
+string[] funFacts = {
+    "Fun Fact: You can type 'rjnld' in the menu for a secret!",
+    "Tip: Always clear your dictionary before repopulating.",
+    "Group 3 — where creativity meets clean code!",
+    "Remember: Debugging is like detective work in reverse!"
+};
+Random random = new Random();
+int index = random.Next(funFacts.Length);
+Console.ForegroundColor = ConsoleColor.Yellow;
+Console.WriteLine($"💡 {funFacts[index]}\n");
+Console.ResetColor();
+Thread.Sleep(800);
+            
             while (running)
             {
                 DisplayMenu();
