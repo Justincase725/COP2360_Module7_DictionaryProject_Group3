@@ -75,8 +75,13 @@ These additions make the application engaging and visually appealing while showi
 
 ---
 
-## 🖥️ How to Run
+## 💻 How to Run
 
-1. Clone the repository  
-   ```bash
-   git clone https://github.com/Justincase725/COP2360_Module7_DictionaryProject_Group3.git
+To build and run the Group 3 Dictionary Project:
+
+```bash
+git clone https://github.com/Justincase725/COP2360_Module7_DictionaryProject_Group3.git
+cd COP2360_Module7_DictionaryProject_Group3
+dotnet build
+dotnet run
+
