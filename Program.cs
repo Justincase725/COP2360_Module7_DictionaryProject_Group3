@@ -19,7 +19,9 @@ namespace Module7DictionaryProject
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("   Welcome to the Group 3 Dictionary System!");
             Console.ForegroundColor = ConsoleColor.White;
-            Thread.Sleep(800);
+            
+            // Keep banner visible for 7 seconds before moving on
+            Thread.Sleep(7000);
             Console.Clear();
 
             // ===== RANDOM FUN FACT =====
