@@ -19,9 +19,10 @@ namespace Module7DictionaryProject
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("   Welcome to the Group 3 Dictionary System!");
             Console.ForegroundColor = ConsoleColor.White;
+
             
-            // Keep banner visible for 7 seconds before moving on
-            Thread.Sleep(7000);
+    
+            Thread.Sleep(3000);
             Console.Clear();
 
             // ===== RANDOM FUN FACT =====
@@ -36,7 +37,7 @@ namespace Module7DictionaryProject
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine($"💡 {funFacts[index]}\n");
             Console.ResetColor();
-            Thread.Sleep(800);
+            Thread.Sleep(3000);
 
             // ===== MAIN LOOP =====
             while (running)
