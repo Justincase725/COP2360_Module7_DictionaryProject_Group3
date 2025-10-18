@@ -84,3 +84,4 @@ git clone https://github.com/Justincase725/COP2360_Module7_DictionaryProject_Gro
 cd COP2360_Module7_DictionaryProject_Group3
 dotnet build
 dotnet run
+
