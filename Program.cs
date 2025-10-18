@@ -88,6 +88,18 @@ Thread.Sleep(800);
                 return true; // goes back to the menu
             }
 
+            // 🥚 Extra Easter Eggs (added by Justin to expand fun options)
+if (userInput.ToLower() == "group3")
+{
+    Console.WriteLine();
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    Console.WriteLine("🔥 Secret unlocked! You’re part of the elite Group 3 devs!");
+    Console.WriteLine("Together we built something awesome for Module 7!");
+    Console.ResetColor();
+    Console.WriteLine();
+    return true;
+}
+
             if (int.TryParse(userInput, out int choice))
             {
                 switch (choice)
