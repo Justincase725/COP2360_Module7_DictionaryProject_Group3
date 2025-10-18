@@ -1,11 +1,9 @@
 using System;
-using System.Collections.Generic;
 
 namespace Module7DictionaryProject
 {
     internal class Program
     {
-        // Creates a single shared Operations object from Nayobe's file
         private static Operations manager = new Operations();
 
         static void Main(string[] args)
@@ -25,7 +23,12 @@ namespace Module7DictionaryProject
                 }
             }
 
-            Console.WriteLine("\nProgram Exited.");
+            // 👇 Your custom goodbye
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\nThank you for using the Group 3 Dictionary!");
+            Console.WriteLine("Developed with care by R.J.N.L.D — ❤️");
+            Console.ResetColor();
+            Console.WriteLine();
         }
 
         private static void DisplayMenu()
@@ -46,7 +49,22 @@ namespace Module7DictionaryProject
 
         private static bool HandleMenuChoice()
         {
-            if (int.TryParse(Console.ReadLine(), out int choice))
+            string userInput = Console.ReadLine()?.Trim() ?? string.Empty;
+
+            // Easter Egg by Leopoldo Ramos 🥚
+            if (userInput.ToLower() == "rjnld")
+            {
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine("🌟 You discovered Group 3’s hidden signature!");
+                Console.WriteLine("R.J.N.L.D — representing the power of teamwork!");
+                Console.WriteLine("Thanks for exploring our project — you’ve got a sharp eye!");
+                Console.ResetColor();
+                Console.WriteLine();
+                return true; // goes back to the menu
+            }
+
+            if (int.TryParse(userInput, out int choice))
             {
                 switch (choice)
                 {
@@ -77,8 +95,9 @@ namespace Module7DictionaryProject
             }
             else
             {
-                Console.WriteLine("Invalid input. Enter a number.");
+                Console.WriteLine("Invalid input. Enter a number (1-7).");
             }
+
             return true;
         }
     }
